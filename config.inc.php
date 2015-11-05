@@ -14,7 +14,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-//$cfg['blowfish_secret'] = 'ba17c1ec07d65003'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+$cfg['blowfish_secret'] = 'ba17c1ec07d65003'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /*
  * Servers configuration
@@ -26,15 +26,15 @@ $i = 0;
  */
 $i++;
 /* Authentication type */
-//$cfg['Servers'][$i]['auth_type'] = 'cookie';
+$cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = 'testdb.cubrisbupoor.us-east-1.rds.amazonaws.com';
+$cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
-$cfg['Servers'][$i]['user']          = 'glide';
-$cfg['Servers'][$i]['password']      = '12345678'; // use here your password
-$cfg['Servers'][$i]['auth_type']     = 'config';
+//$cfg['Servers'][$i]['user']          = 'glide';
+//$cfg['Servers'][$i]['password']      = '12345678'; // use here your password
+//$cfg['Servers'][$i]['auth_type']     = 'config';
 /*
  * phpMyAdmin configuration storage settings.
  */
