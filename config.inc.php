@@ -14,7 +14,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = 'ba17c1ec07d65003'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+//$cfg['blowfish_secret'] = 'ba17c1ec07d65003'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /*
  * Servers configuration
@@ -28,18 +28,15 @@ $i++;
 /* Authentication type */
 //$cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Authentication type */
-$cfg['Servers'][$i]['verbose'] = 'testrds';
-//$cfg['Servers'][$i]['auth_type'] = 'cookie';
-$cfg['Servers'][$i]['auth_type'] = 'config';
-$cfg['Servers'][$i]['user'] = 'glide';
-$cfg['Servers'][$i]['password'] = '';
-/* Server parameters */
-$cfg['Servers'][$i]['host'] = '12345678';
+$cfg['Servers'][$i]['host'] = 'testdb.cubrisbupoor.us-east-1.rds.amazonaws.com';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
-$cfg['Servers'][$i]['compress'] = false;
-/* Select mysql if your server does not have mysqli */
-$cfg['Servers'][$i]['extension'] = 'mysql';
+$cfg['Servers'][$i]['compress'] = TRUE;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
+$cfg['Servers'][$i]['user']          = 'glide';
+$cfg['Servers'][$i]['password']      = '12345678'; // use here your password
+$cfg['Servers'][$i]['auth_type']     = 'config';
+$cfg['Servers'][$i]['port'] = '3306';
+$cfg['Servers'][$i]['socket'] = '';
 /* Server parameters */
 //$cfg['Servers'][$i]['host'] = 'localhost';
 //$cfg['Servers'][$i]['connect_type'] = 'tcp';
