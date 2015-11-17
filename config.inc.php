@@ -26,12 +26,25 @@ $i = 0;
  */
 $i++;
 /* Authentication type */
-$cfg['Servers'][$i]['auth_type'] = 'cookie';
+//$cfg['Servers'][$i]['auth_type'] = 'cookie';
+/* Authentication type */
+$cfg['Servers'][$i]['verbose'] = 'testrds';
+//$cfg['Servers'][$i]['auth_type'] = 'cookie';
+$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['user'] = 'glide';
+$cfg['Servers'][$i]['password'] = '';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = 'localhost';
+$cfg['Servers'][$i]['host'] = '12345678';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = false;
+/* Select mysql if your server does not have mysqli */
+$cfg['Servers'][$i]['extension'] = 'mysql';
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
+/* Server parameters */
+//$cfg['Servers'][$i]['host'] = 'localhost';
+//$cfg['Servers'][$i]['connect_type'] = 'tcp';
+//$cfg['Servers'][$i]['compress'] = false;
+//$cfg['Servers'][$i]['AllowNoPassword'] = true;
 //$cfg['Servers'][$i]['user']          = 'glide';
 //$cfg['Servers'][$i]['password']      = '12345678'; // use here your password
 //$cfg['Servers'][$i]['auth_type']     = 'config';
